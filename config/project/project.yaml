@@ -1,0 +1,163 @@
+dateModified: 1674135411
+email:
+  fromEmail: no-reply@trendyminds.com
+  fromName: 'Craft Starter'
+  replyToEmail: null
+  template: null
+  transportSettings:
+    command: ''
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: /uploads
+meta:
+  __names__:
+    1b4cb13c-c607-4ef9-9929-0515c1ae1155: Theme
+    1b5aa549-73a1-483d-99ed-979421f731eb: Image
+    3b752fd5-affd-4119-83ff-7644b4841638: 'Public Schema'
+    5b9a6c5a-5c4a-4b8e-9693-13d2abaf0353: SEO
+    5dff8c47-8d8d-4eec-8aa9-877808af9e85: Embed
+    6b4c47ef-2a3d-49be-9aad-a7746f1d7c1f: 'Scroll Landmark'
+    6e486ed7-b985-4850-a4a4-6a955bbb7c55: Code
+    7b118a3c-39c9-4686-bbeb-98aed588997f: Home
+    7cfc82c5-764c-4280-82cf-added60129a6: Body
+    9c93f812-1c86-4bb6-a2d6-a9cba66eb8d3: '404'
+    65d36730-0c18-4c9f-b3af-1b363532bc2c: Default
+    87da7d8f-b34b-4580-9739-8cd9b3de8ceb: 'Public Schema'
+    180eadeb-4529-4e97-8680-fbf8aadbe09b: Home
+    366f2fce-cfd1-4bfd-bc19-95788b275078: Blocks
+    722a7f69-325f-4926-b3d6-91eadac9abbf: 'Craft Starter'
+    789db799-5bed-43f9-a5a6-f4e3e317b089: Identifier
+    5324ab2b-8229-4e57-9c9e-71ca2c1a52e0: Common
+    60599ffa-fd22-4690-a031-e14bfe884c54: '404'
+    5572540a-3cc8-437c-b954-4789d90c0742: Hero
+    a4f79d70-cd11-4d2b-89e3-28e9dcff1963: Pages
+    a33de693-dd34-4c83-910c-5cbcfcdc0b8b: 'Public Schema'
+    b0773a44-e042-4fdb-ae1b-1f123f7e2fdf: 'Public Schema'
+    b7018985-0821-4fdf-b59f-baa108767036: 'Rich Text'
+    bce63b46-1b4d-4094-8ea0-87e583390723: 'Public Schema'
+    bf70644b-2885-4c41-9760-77f40894cce8: 'Public Schema'
+    c211a767-f59f-49da-949c-ab3500d241cd: Body
+    c378f2eb-aae9-43a3-a2c4-e03fc29b595b: Uploads
+    ced93e59-c4c4-45fe-a285-cd50897cd9fc: 'Public Schema'
+    d63a5262-8ff6-4c9e-9c3b-2a117be8bbbe: Heading
+    ef49fcb7-beb6-4a22-ad86-d5595d8f2c5c: Header
+    fc106af2-97bb-4e71-8fb8-e37d93a4b6c5: $SITE_NAME
+plugins:
+  blitz:
+    edition: standard
+    enabled: true
+    licenseKey: HAH3XODO7HZ11M8KNMBEQUJE
+    schemaVersion: 4.2.0
+    settings:
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      integrations:
+        - putyourlightson\blitz\drivers\integrations\CommerceIntegration
+      refreshMode: 3
+  craft-ray:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  designtokens:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    licenseKey: 80ZULY93B8L731VIZG7OKEIS
+    schemaVersion: 2.0.7
+  palette:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retour:
+    edition: standard
+    enabled: true
+    licenseKey: OIR0ENLHUM5E7KNO0VVHG4FE
+    schemaVersion: 3.0.11
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: 6ULPJHT4RKIZ2D1JGU2Z2FPM
+    schemaVersion: 3.0.11
+    settings:
+      addHrefLang: true
+      addPaginatedHreflang: true
+      addXDefaultHrefLang: true
+      alwaysIncludeCanonicalUrls: false
+      cpTitlePrefix: '⚙ '
+      cspNonce: ''
+      cspScriptSrcPolicies:
+        -
+          __assoc__:
+            -
+              - policy
+              - '''self'''
+      devModeCpTitlePrefix: '&#x1f6a7;⚙ '
+      devModeTitlePrefix: '&#x1f6a7; '
+      displayAnalysisSidebar: true
+      displayPreviewSidebar: true
+      enableJsonLdEndpoint: false
+      enableMetaContainerEndpoint: false
+      enableSeoFileLinkEndpoint: false
+      environment: live
+      excludeNonCanonicalUrls: false
+      generatorEnabled: true
+      headersEnabled: true
+      includeHomepageInBreadcrumbs: true
+      lowercaseCanonicalUrl: true
+      manuallySetEnvironment: false
+      maxDescriptionLength: 155
+      maxTitleLength: 70
+      metaCacheDuration: 0
+      pluginName: SEOmatic
+      regenerateSitemapsAutomatically: true
+      renderEnabled: true
+      separatorChar: '|'
+      sidebarDisplayPreviewTypes:
+        - google
+        - twitter
+        - facebook
+      siteGroupsSeparate: true
+      siteUrlOverride: ''
+      sitemapsEnabled: true
+      socialMediaPreviewTarget: true
+      submitSitemaps: true
+      truncateDescriptionTags: true
+      truncateTitleTags: false
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+system:
+  edition: pro
+  live: true
+  name: $SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.0.0.9
+  timeZone: America/Indiana/Indianapolis
+users:
+  allowPublicRegistration: false
+  deactivateByDefault: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

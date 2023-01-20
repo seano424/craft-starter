@@ -1,0 +1,39 @@
+{% set title = "Navigation" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<p>Navigation is a used to manage the navigations across your site. To manage your navigations, select <a href="{{ cpUrl('navigation') }}">Navigation</a> from the global sidebar.</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/navigation-dashboard.png">
+	</figure>
+
+	<h2>Adding items to a navigation</h2>
+	<p>To add new items to the selected navigation, you may use one of the various navigation options listed on the right side of your screen:</p>
+
+	<ul>
+		<li><strong>Entries</strong>: This will allow you to select a page that is part of the CMS directly from the CMS.</li>
+		<li><strong>Categories</strong>: This will allow you to link to a category page.</li>
+		<li><strong>Assets</strong>: This will allow you to link to an asset URL. An example of this use could be if you would like to link to a PDF file in your main navigation.</li>
+		<li><strong>Passive</strong>: Does not link to anything and is simple informative. These are used for Navigation headers. Examples of passive items are shown in the screenshot below:</li>
+		<li><strong>Custom URL</strong>: This will allow you to link to a custom URL that you can set to open in a new window or is a link to an external website.</li>
+	</ul>
+
+	<p>Click the red "Add an entry" button and to insert the item into your navigation. You may also drag to reorder or nest the item under an existing parent (if your navigation supports hierarchies).</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/navigation-view.png">
+	</figure>
+
+	<h2>Editing items</h2>
+	<p>To edit the title of a navigation item, whether it should open in a new window, etc. you may click the "Edit" button that displays to the right of the title when you hover over that item within the navigation. Be sure to hit the red "Save" button if you make any modifications to how the page should display on the navigation.</p>
+
+	<h2>Removing items</h2>
+	<p>To remove pages from the navigation, check the box to the left and select the gear icon at the top of the page. You may choose to delete just the selected item as well as the option to delete the item and its descendants.</p>
+
+	<p><strong>Note:</strong> Removing a page from the navigation does not delete the entry within the Entries section of the CMS. There are instances where it is perfectly acceptable to have an entry enabled on your website, but hidden from the navigation.</p>
+
+	<hr>
+
+	<p>For more about Navigation, consult the <a href="https://verbb.io/craft-plugins/navigation/docs">plugin documentation</a>.</p>
+{% endblock %}

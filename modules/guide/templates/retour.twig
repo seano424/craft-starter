@@ -1,0 +1,43 @@
+{% set title = "Retour" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<p>Retour is a plugin used to manage your website redirects. To manage redirects, select <a href="{{ cpUrl('retour') }}">Retour</a> in the navigation.</p>
+
+	<h2>Dashboard</h2>
+	<p>The dashboard gives you a high-level look of pages on your website that are 404’ing, the last referring URL, number of hits that page is getting, last time it was visited, and if there is or is not a redirect in place (handled).</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/retour-dashboard.png">
+	</figure>
+
+	<h2>Redirects</h2>
+	<p>The redirects view is where you can paginate through or search for redirects. This is where you can edit an existing redirect or create a new one.</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/retour-redirects.png">
+	</figure>
+
+	<h2>Adding a redirect</h2>
+	<p>To add a new redirect, click the "New Static Redirect" button in the top right corner. You will then be asked to populate the necessary information for this specific redirect:</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/retour-new.png">
+	</figure>
+
+	<ul>
+		<li><strong>Enabled</strong>: If you are not ready for this redirect to be active yet, you can toggle this off</li>
+		<li><strong>Sites</strong>: If your CMS is using Craft multi-site, this is where you will select the site that this redirect is for. If you are not using Craft multi-site, you don’t need to do anything here.</li>
+		<li><strong>Legacy URL Pattern</strong>: This is where you will include the old URL, the one that will no longer exist. You do not need to include the domain when you add it. You only need to include everything after the / in the URL.</li>
+		<li><strong>Legacy URL Match Type</strong>: If you do not include the domain for these redirects, you can leave this as Path Only.</li>
+		<li><strong>Destination URL</strong>: This is where you will include where this Legacy URL should redirect users to. You do not need to include the domain when you add it. You only need to include everything after the / in the URL.</li>
+		<li><strong>Match Type</strong>: You will want the match to be Exact Match.</li>
+		<li><strong>Redirect Type</strong>: For the CMS purposes, this doesn’t impact the redirect. You can leave these alone and use the 301-Permanent default setting. If you want to update to use a 302-Temp or 410-Gone for your own tracking purposes, that will also work.</li>
+	</ul>
+
+	<p><strong>Note</strong>: A page needs to 404 in order for the redirect to work. You will not be able to redirect away from a page that is active/enabled. In these cases you will need to disable the entry (causing it to 404) and then your redirect will properly work.</p>
+
+	<hr>
+
+	<p>For more about Retour, consult the <a href="https://nystudio107.com/docs/retour/">plugin documentation</a>.</p>
+{% endblock %}

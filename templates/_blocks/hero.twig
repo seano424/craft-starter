@@ -1,0 +1,16 @@
+{% set image = block.image.one() %}
+
+<section class="my-base {{ block.theme.get('bg') }} {{ block.theme.key != 'white' ? 'py-base' }} text-center grid gap-8">
+	<div class="container">
+		<h1 class="text-4xl mb-4 font-black {{ block.theme.get('text') }}">
+			{{ block.heading }}
+		</h1>
+		<img
+			class="mx-auto rounded-lg"
+			src="{{ image.url({ width: 640 }) }}"
+			height="{{ image.height({ width: 640 }) }}"
+			width="{{ image.width({ width: 640 }) }}"
+			alt="{{ image.alt ?: image.title }}"
+		>
+	</div>
+</section>

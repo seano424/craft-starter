@@ -1,0 +1,16 @@
+{% set title = "Categories" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<p>Categories enable hierarchical organization structures for content like blog posts, news articles, and press releases.</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/category.png">
+	</figure>
+
+	<p>To add, edit, or manage categories go to the <a href="{{ cpUrl('categories') }}">Categories</a> tab in the navigation.</p>
+
+	<p>The category types are created by TrendyMinds to ensure they are properly connected across the CMS and front-end of the website. Categories can be added freely by anyone with proper permissions.</p>
+
+	<p>Categories often allow for a hierarchy to allow for rich taxonomies based on your content needs.</p>
+{% endblock %}

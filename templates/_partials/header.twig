@@ -1,0 +1,19 @@
+<header class="bg-gray-200">
+	<nav class="container py-4 flex items-center justify-between">
+		<a class="block w-48" href="/">
+			{{ svg('@webroot/images/logo.svg') }}
+		</a>
+
+		<div class="space-x-4">
+			{% for item in craft.navigation.nodes.handle('header').all() %}
+				<a
+					class="underline"
+					href="{{ item.url }}"
+					target="{{ item.newWindow ? '_blank' : '_self' }}"
+				>
+					{{- item.title -}}
+				</a>
+			{% endfor %}
+		</div>
+	</nav>
+</header>

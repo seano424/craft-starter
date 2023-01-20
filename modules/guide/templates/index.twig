@@ -1,0 +1,53 @@
+{% set title = "Intro" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<p>
+		Your website is built on <a href="https://craftcms.com">Craft CMS</a>, which provides control and flexibility for you to add and edit content to your website without requiring external help.
+	</p>
+	<p>
+		To learn how to use Craft, select a topic from the left-side menu on this page. Each tab will walk you through common CMS actions step-by-step and includes screenshots or other resources to provide visuals.
+	</p>
+
+	<h2>Logging In and Out</h2>
+	<p>
+		To log in, input the link below into your web browser and enter your username and password in the fields provided.
+	</p>
+	<ul>
+		<li><strong>Craft Login URL:</strong> <a href="{{ cpUrl('login') }}">{{ cpUrl('login') }}</a></li>
+		<li><strong>Username:</strong> {{ currentUser.username }}</li>
+		<li><strong>Password:</strong> Unique per user</li>
+	</ul>
+	<p>
+		To use Craft, you will need to have the latest version of your respective web browser installed. In some older versions, you may have issues loading and saving content or even seeing the CMS screen.
+	</p>
+	<p>
+		Craft is a web-based CMS that automatically times out due to periods of inactivity. If you will be away from your desk or are leaving for the day, make sure to save all work and changes. This will ensure all content and files are the most current version.
+	</p>
+	<p>
+		To log out, select the downward-facing arrow in the top right corner of your screen. Select "Sign out" from the menu.
+	</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/dashboard.png">
+	</figure>
+
+	<h2>Navigation</h2>
+	<ul>
+		{% for item in craft.cp.nav() %}
+			{% set hasContent = "info:#{ item.label }" | t('guide') != "info:#{ item.label }" %}
+			<li>
+				<strong>
+					<a href="{{ item.url }}">{{ item.label }}</a>{{ hasContent ? ':' }}
+				</strong>
+				{% if hasContent %}
+					{{ "info:#{ item.label }" | t('guide') }}
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+
+	<hr>
+
+	<p>For other useful information you may consult <a href="https://craftcms.com/docs">Craft's documentation</a>.</p>
+{% endblock %}

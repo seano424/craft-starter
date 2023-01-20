@@ -1,0 +1,25 @@
+{% set bundle = getenv('ASSET_BUNDLE_URL') %}
+{% set revision = devMode ? now | date('U') : 'BUNDLE_HASH' %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>[x-cloak] { display: none !important; }</style>
+	<link rel="stylesheet" href="{{ bundle }}main.bundle.css?v={{ revision }}">
+	<script src="{{ bundle }}main.bundle.js?v={{ revision }}" defer></script>
+	{% block head %}{% endblock %}
+</head>
+
+<body class="{{ devMode ? 'debug-screens' }} flex flex-col min-h-screen">
+	{% include '_partials/header' %}
+	<main class="flex-1">
+		{% block body %}{% endblock %}
+	</main>
+	{% include '_partials/footer' %}
+	{{ sprig.script }}
+</body>
+
+</html>

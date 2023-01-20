@@ -1,0 +1,14 @@
+{
+	"white": {
+		"text": "text-slate-700",
+		"bg": "bg-white"
+	},
+	"indigo": {
+		"text": "text-indigo-600",
+		"bg": "bg-indigo-50"
+	},
+	"blue": {
+		"text": "text-blue-600",
+		"bg": "bg-blue-50"
+	}
+}

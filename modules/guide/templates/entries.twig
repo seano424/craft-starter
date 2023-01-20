@@ -1,0 +1,26 @@
+{% set title = "Entries" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<p>The entries across your site differ depending on what type of content they represent. For instance, a "Blog" entry may have categories whereas an "FAQ" entry might just ask for a question and an answer.</p>
+
+	<p>Though there are differences, there are common attributes you'll notice across all of the entries on the site:</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/new-entry.png">
+	</figure>
+
+	<ul>
+		<li><strong>Title</strong>: This field is the title of your entry and is what is primarily used to identify this record. Text entered in this field is, in most cases, the title used on the front-end as well.</li>
+		<li><strong>Preview</strong>: This button allows you to see what an entry will look like before saving your changes.</li>
+		<li><strong>View</strong>: Selecting an item from this drop down will also allow you to view these changes before saving your work.</li>
+		<li><strong>Save</strong>: Selecting the red Save button will allow you to save the changes made to this entry.</li>
+		<li><strong>Slug</strong>: This is the unique identifier used to construct the URL of this entry. By default it is based off the title, but can be altered.</li>
+		<li><strong>Parent</strong>: If your page is nested under another page (a subpage or child page), then the parent page field will include a link to that page for reference. If nothing is in this field, this page is a top-level page.</li>
+		<li><strong>Author</strong>: This field adds information on the entry author. In most cases, this is only to see who opened the entry in the CMS and does not display on the front-end of the website.</li>
+		<li><strong>Post Date</strong>: This field is the date and time that the entry will appear on the website. Post date gives you the option to publish entries ahead of time by setting them for a date into the future.</li>
+		<li><strong>Expiry Date</strong>: This field allows you to set a date and time when this entry will expire and no longer be visible on the website.</li>
+		<li><strong>Enabled</strong>: This toggle determines if the entry is disabled or enabled. If enabled, this entry is visible to users on the website. When disabled this entry is not available to users on the website.</li>
+		<li><strong>SEO Preview</strong>: SEO is managed within <a href="{{ cpUrl('seomatic') }}">SEOmatic</a>, but a preview of the current settings for the specific entry that you are editing is available here.</li>
+	</ul>
+{% endblock %}

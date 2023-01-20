@@ -1,0 +1,65 @@
+{% set title = "Assets" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<h2>Adding new assets</h2>
+	<p>To add assets from the assets library, select <a href="{{ cpUrl('assets') }}">Assets</a> from the navigation. Choose appropriate asset folder from the left side menu. Click the "Upload files" button to upload files from your computer.</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/asset-dashboard.png">
+	</figure>
+
+	<h2>Editing assets</h2>
+	<p>Like entries, assets also can be edited when clicking them. This allows you to modify things like titles, filenames, and focal points and alt text (for image assets).</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/asset-edit.png">
+	</figure>
+
+	<h2>Replacing assets</h2>
+	<p>Go to Assets from the navigation. Before you upload the asset to be replaced, you will want to confirm that these assets have the same filename. If the name differs from the existing one (including spaces or other characters), Craft may upload a new file vs. replacing the existing one. <strong>Note:</strong> this is why we cover using <em>references</em> when linking to assets instead of raw URLs later in this page.</p>
+
+	<p>Once you locate the file to be updated, select the empty checkbox to the left of the asset. A gear icon with a drop down arrow will appear. Within the drop down, select "Replace file" and choose the file from your computer.</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/asset-replace.png">
+	</figure>
+
+	<h2>Best practices for image assets</h2>
+	<p>When uploading images pay close attention to the filesize. While we take initiative to scale images to an optimal size for both desktop and mobile devices it can slow your server down when transforming and scaling large imagery. A good rule of thumb—unless specially instructed otherwise—is...</p>
+
+	<ol>
+		<li>Keep images smaller than 2000 pixels in both height and width</li>
+		<li>Ensure your image filesize is no more than 1.5 MB</li>
+	</ol>
+
+	<p>Here are useful free tools to compress your images if needed:</p>
+
+	<ul>
+		<li><a href="https://jpegmini.com">JPEGmini</a></li>
+		<li><a href="https://imageoptim.com">ImageOptim</a></li>
+	</ul>
+
+	<h2>Supplying image alt text</h2>
+	<p>Alt text is a crucial feature that ensures users who require assisted technology can easily understand the information that your site provides. It's important to be descriptive, but not overly verbose. As you write these, close your eyes and imagine someone reading the text you've drafted out loud. Is it understandable? If so, you're on the right track.</p>
+
+	<p>There are a few different ways to supply alt text for your images.</p>
+
+	<ol>
+		<li><strong>Within the Asset edit page</strong>: When you upload an image you can supply your alt text within the "Alternative Text" field.</li>
+		<li><strong>Double clicking an asset on the entry it's used on</strong>: This will open up the aforementioned "Asset edit page", but within the context of your entry. From here you can supply your text within the same "Alternative Text" field noted above.</li>
+		<li><strong>In the Rich Text field</strong>: When you add an image inside of a Rich Text field you need to add alt text by clicking the image and selecing "Edit". Once you have done this, you will be able to add your alt text into the "Title" field.</li>
+	</ol>
+
+	<h2>Obtaining an Asset URL</h2>
+	<p>When using assets across your site the best thing you can do is insert them as <em>references</em>. For instance, instead of selecting a "URL" in a callout field, select your asset directly. Or, when you are in a rich text field, use the "Link to an asset" option. Doing this ensures that—if your asset changes—your links won't be broken.</p>
+
+	<p>However, there are occassions when you need a raw URL to share with someone. In those cases you can obtain an asset URL by</p>
+
+	<ol>
+		<li>Navigating to <a href="{{ cpUrl('assets') }}">Assets</a></li>
+		<li>Locating the asset you need</li>
+		<li>Clicking the globe icon in that row</li>
+		<li>Copying the URL in the new tab that opened showing your asset</li>
+	</ol>
+{% endblock %}

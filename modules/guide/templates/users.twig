@@ -1,0 +1,41 @@
+{% set title = "Users" %}
+{% extends "guide/_layout" %}
+
+{% block inner_content %}
+	<h2>Managing Users</h2>
+	<p>User groups help to organize the CMS user accounts, as well as batch-set permissions. Specific users are assigned to user groups and a user can belong to multiple groups.</p>
+
+	<p>When you select <a href="{{ cpUrl('users') }}">Users</a> in the navigation, you will see an existing list of Users that have access to this CMS.</p>
+
+	<p>The dots that are to the left of each user indicates their status:</p>
+
+	<ul>
+		<li><strong>Green</strong>: This is an active user</li>
+		<li><strong>Orange</strong>: This user has not yet activated their account for the CMS</li>
+		<li><strong>Red</strong>: A disabled account likely due to that user no longer needing access or having left an organization</li>
+	</ul>
+
+	<p>You can click through the different user groups on the left as well to see who is part of which group and what their permissions in the CMS are.</p>
+
+	<h2>Adding a User</h2>
+	<p>Click <a href="{{ cpUrl('users') }}">Users</a> in the navigation. Select the red, "New User" button in the top right corner of the screen. For each user that you wish to register/create an account, you will need to fill in the responses on the Account and Permissions tabs.</p>
+
+	<h3>Account Tab:</h3>
+	<p>Confirm that you have checked the “Send an activation email now” so that the new user can finish their account activation</p>
+
+	<h3>Permissions Tab:</h3>
+	<p>These User Groups are created when the CMS is set-up. If more are needed down the road, please reach out to TrendyMinds for set-up and creation of these.</p>
+
+	<p>If the new user should belong to a specific User Group(s), select that option(s) from the list. If they should simply be an admin and see everything in the CMS, select the Admin box under Permissions</p>
+
+	<p>Once finished, clicke the Save button in the top right corner to finish the creation of this new user account.</p>
+
+	<h2>Disabling a Craft User</h2>
+	<p>Sometimes team members no longer need access to the CMS for one reason or another. We recommend that you periodically clean up the user list (we do the same for all of our team members and client websites)!</p>
+
+	<p>If a user doesn’t need access anymore, you will want to suspend their account. To do this, select the check box to the left of that user name in the list. A gear icon will appear at the bottom of the page and you will select that drop-down:</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/suspend.png">
+	</figure>
+{% endblock %}

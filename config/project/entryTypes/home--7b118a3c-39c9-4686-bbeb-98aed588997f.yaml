@@ -1,0 +1,73 @@
+fieldLayouts:
+  a50cc0b4-cf4a-45a0-8fba-154493ad4cdc:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: aad173cf-c678-4ffa-b4c1-d3e72a29e087
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 366f2fce-cfd1-4bfd-bc19-95788b275078
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7ab6df7a-6ec7-4fb5-9a9c-54b4f697cb10
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6d02d106-32bb-4c23-9bf0-a09c17b1f774
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5b9a6c5a-5c4a-4b8e-9693-13d2abaf0353
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 883ff18f-4141-4fda-bcdc-4d4a839c13f2
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 1391e24d-c431-4eaa-9100-16c3327c9e94
+        userCondition: null
+handle: home
+hasTitleField: false
+name: Home
+section: 180eadeb-4529-4e97-8680-fbf8aadbe09b
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

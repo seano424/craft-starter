@@ -1,0 +1,73 @@
+fieldLayouts:
+  bcaa0ac6-8885-4213-be8e-55cc53292bfb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 74b2b144-fa6e-470f-a0da-1809273c6007
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 366f2fce-cfd1-4bfd-bc19-95788b275078
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 46c002b0-fe03-4f30-8ab7-21006f907bfc
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 17fb34d2-6472-492d-84e2-cb2e6cd4211a
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5b9a6c5a-5c4a-4b8e-9693-13d2abaf0353
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a26f3be-59ed-453e-831f-7ab7be7ab131
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: ab8fe738-19f3-4e5a-9d58-f34819b0eb7b
+        userCondition: null
+handle: default
+hasTitleField: true
+name: Default
+section: a4f79d70-cd11-4d2b-89e3-28e9dcff1963
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

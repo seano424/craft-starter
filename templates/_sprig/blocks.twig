@@ -1,0 +1,98 @@
+{# Get Field #}
+{% set blocksField = craft.app.fields.getFieldByHandle('blocks') %}
+
+{# Sprig Variables #}
+{% set selected = selected ?? '' %}
+{% set blockIds = craft.matrixBlocks().fieldId(blocksField.id).type(selected).ids() %}
+{% set id = id ?? blockIds[0] %}
+{% set blockCount = blockIds|length  %}
+
+{# Figure Out Current Index #}
+{% set index = 0 %}
+{% for blockId in blockIds %}
+	{% if blockId == id  %}
+		{% set index = loop.index0 %}
+	{% endif %}
+{% endfor %}
+
+{# Index-based Variables #}
+{% set isFirst = index == 0 %}
+{% set isLast = index + 1 == blockCount %}
+
+{# Fetch block and Parent Entry #}
+{% set block = craft.matrixBlocks().fieldId(blocksField.id).id(blockIds[index]).one() %}
+{% set entry = block.owner ?? null %}
+
+{# Persist URL #}
+{% do sprig.pushUrl("?" ~ "selected=" ~ selected|url_encode ~ '&id=' ~ id|url_encode) %}
+
+<form sprig class="my-base">
+	<div class="container">
+		<div class="max-w-xl mx-auto">
+			<h1 class="text-4xl font-bold text-red">Block Viewer</h1>
+			<p class="mt-2 text-xl max-w-2xl">Select a block type from the below dropdown, and you will get a preview of a live block from elsewhere on the site!</p>
+			<label class="block mt-8">
+				<span class="block font-bold text-gray-700">Selected Block:</span>
+				<select
+					class="px-4 py-2 rounded w-full"
+					name="selected"
+					sprig
+				>
+					<option value="">None</option>
+					{% for type in blocksField.blockTypes %}
+						{% if type.handle != 'guide' %}
+							<option
+								value="{{ type.handle }}"
+								{{ selected == type.handle ? 'selected' : '' }}
+							>
+								{{ type.name }}
+							</option>
+						{% endif %}
+					{% endfor %}
+				</select>
+			</label>
+			{% if selected != '' and blockCount > 0 %}
+				<div class="mt-2 flex items-center justify-between gap-4">
+					<p>Current block: <span class="font-extrabold">{{ index + 1 }}/{{ blockCount }}</span></p>
+					{% if entry %}
+					<p class="flex items-center gap-2">
+						<span>
+							Block Location:
+						</span>
+						<a target="_blank" class="font-extrabold underline" href="{{ entry.url }}">View</a>
+						<a target="_blank" class="font-extrabold underline" href="{{ entry.getCpEditUrl }}">Edit</a>
+					</p>
+					{% endif %}
+				</div>
+			{% else %}
+				<p class="mt-2">No blocks found.</p>
+			{% endif %}
+			{% if selected != '' and blockCount > 0 %}
+				<div class="mt-4 flex items-center gap-4">
+					<button
+						class="button {{ isFirst ? 'cursor-not-allowed opacity-25' }}"
+						sprig
+						s-val:id="{{ isFirst ? id : blockIds[index - 1] }}"
+						{{ isFirst ? 'disabled' }}
+					>
+						Previous
+					</button>
+					<button
+						class="button {{ isLast ? 'cursor-not-allowed opacity-25' }}"
+						sprig
+						s-val:id="{{ isLast ? id : blockIds[index + 1] }}"
+						{{ isLast ? 'disabled' }}
+					>
+						Next
+					</button>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</form>
+
+{% if selected != '' and blockCount > 0 %}
+	<div class="mt-8 mx-2 border border-dashed">
+		{% include "_blocks/#{selected}" with { block: block } %}
+	</div>
+{% endif %}

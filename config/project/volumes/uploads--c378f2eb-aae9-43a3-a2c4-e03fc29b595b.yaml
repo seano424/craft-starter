@@ -1,0 +1,66 @@
+fieldLayouts:
+  0e7e4cfa-23d1-4470-9bf3-36f0fc924642:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: b6032b70-ae9b-4eb5-874c-c1da3c123120
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: "Images must have text alternatives that describe the information or function represented by them. This ensures that images can be used by [people with various disabilities](https://www.w3.org/WAI/tutorials/images/#why-is-this-important).\r\n\r\nFor information on how to write proper \"alt text\" consult with [W3.org's guide](https://www.w3.org/WAI/tutorials/images/)"
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: 79325d31-bb01-43e8-8839-4d5b47ac7282
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2c39bfbd-5a37-476f-903e-1ac7a399b891
+        userCondition: null
+fs: uploads
+handle: uploads
+name: Uploads
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

@@ -1,0 +1,131 @@
+field: 366f2fce-cfd1-4bfd-bc19-95788b275078
+fieldLayouts:
+  c67a3388-d9ee-43ab-8795-61b0669c3811:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d63a5262-8ff6-4c9e-9c3b-2a117be8bbbe
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a2be0f30-4d4f-49bd-8486-71e178b7db0e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1b5aa549-73a1-483d-99ed-979421f731eb
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 168cd7aa-5d4c-450f-985c-543e6a23efcb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1b4cb13c-c607-4ef9-9929-0515c1ae1155
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e568abca-6164-4758-9d29-bb2ee87eadbd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 20dc60f2-8c3a-4577-b8d0-f2d389fd2105
+        userCondition: null
+fields:
+  1b4cb13c-c607-4ef9-9929-0515c1ae1155:
+    columnSuffix: rpbfclvb
+    contentColumnType: string
+    fieldGroup: null
+    handle: theme
+    instructions: null
+    name: Theme
+    searchable: false
+    settings:
+      config: hero.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: trendyminds\designtokens\fields\DesignTokensField
+  1b5aa549-73a1-483d-99ed-979421f731eb:
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:c378f2eb-aae9-43a3-a2c4-e03fc29b595b'
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: null
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:c378f2eb-aae9-43a3-a2c4-e03fc29b595b'
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d63a5262-8ff6-4c9e-9c3b-2a117be8bbbe:
+    columnSuffix: teloeifv
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: null
+    name: Heading
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: hero
+name: Hero
+sortOrder: 2

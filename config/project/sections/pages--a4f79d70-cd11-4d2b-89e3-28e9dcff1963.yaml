@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: Pages
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  fc106af2-97bb-4e71-8fb8-e37d93a4b6c5:
+    enabledByDefault: true
+    hasUrls: true
+    template: index.twig
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: null
+  uid: b5047ad8-7730-4a18-9150-ff9e31388e54
+type: structure

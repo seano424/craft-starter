@@ -1,0 +1,12 @@
+<div
+	id="{{ block.identifier | replace('#', '') }}"
+	x-init="() => {
+		{# Hide This Node After Page Loads #}
+		$el.removeAttribute('id')
+		$el.classList.add('hidden')
+		$el.setAttribute('aria-hidden', 'true')
+		{# Add ID to Next Block #}
+		const nextBlock = $el.nextElementSibling
+		nextBlock.setAttribute('id', '{{ block.identifier | replace('#', '') }}')
+	}"
+></div>

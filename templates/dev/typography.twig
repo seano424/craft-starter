@@ -1,0 +1,109 @@
+{% extends '_layout' %}
+
+{% if not currentUser %}
+	{% exit 404 %}
+{% endif %}
+
+{% block body %}
+	<div class="container my-base rich-text">
+		<h1>Heading 1</h1>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h2>Heading 2</h2>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h3>Heading 3</h3>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h4>Heading 4</h4>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h5>Heading 5</h5>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h6>Heading 6</h6>
+		<p>
+			Sodales <strong>justo tortor</strong> consequat <em>nisi litora</em> ex per
+			<a href="https://rcf.trendyminds.io/#entry:3@1:url">nascetur urna</a> iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</p>
+		<h6>Unordered Lists:</h6>
+		<ul>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+		</ul>
+		<h6>Ordered Lists:</h6>
+		<ol>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+			<li>
+				purus nullam consequat magna placerat hendrerit rutrum praesent dui lectus
+				maecenas malesuada vivamus arcu curae id ridiculus aenean ipsum ad.
+			</li>
+		</ol>
+		<h6>Block Quote</h6>
+		<blockquote>
+			Sodales justo tortor consequat nisi litora ex per nascetur urna iaculis
+			cubilia vestibulum sapien blandit ut felis nullam vehicula feugiat euismod
+			lacinia placerat faucibus fusce leo sem maximus inceptos integer taciti neque
+			efficitur phasellus suspendisse ad duis nulla fringilla rhoncus.
+		</blockquote>
+		<h6>Code Block</h6>
+		<pre>console.log('hello world')</pre>
+		<h6>Image</h6>
+		<img src="https://dummyimage.com/1280x720/000/fff" alt="Dummy image.">
+		<h6>Video (iframe)</h6>
+		<figure>
+			<iframe
+				class="video"
+				width="100%"
+				src="//www.youtube.com/embed/dQw4w9WgXcQ"
+				frameborder="0"
+				allowfullscreen=""
+			></iframe>
+		</figure>
+	</div>
+{% endblock %}

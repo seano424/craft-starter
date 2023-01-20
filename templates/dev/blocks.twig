@@ -1,0 +1,9 @@
+{% extends '_layout' %}
+
+{% if not currentUser %}
+	{% exit 404 %}
+{% endif %}
+
+{% block body %}
+	{{ sprig('_sprig/blocks') }}
+{% endblock %}

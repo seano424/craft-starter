@@ -1,0 +1,9 @@
+{# We need to ensure our "entry" is always set to the custom Single handling 404 content #}
+{% set entry = craft.entries.section('error404').one() %}
+{% do seomatic.meta.seoTitle(entry.title) %}
+
+{% extends '_layout' %}
+
+{% block body %}
+	{% include "_partials/blocks.twig" %}
+{% endblock %}

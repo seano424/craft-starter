@@ -1,0 +1,45 @@
+{% do view.registerAssetBundle("modules\\guide\\assetbundles\\GuideAsset") %}
+{% set images = view.getAssetManager().getPublishedUrl('@modules/guide/images', true) %}
+{% extends "_layouts/cp" %}
+
+{# Breadcrumbs #}
+{% set crumbs = [
+  { label: 'Guide', url: url('guide') },
+  { label: title, url: '' },
+] %}
+
+{# Navigation #}
+{% set pages = [
+	{ title: 'Intro', uri: '' },
+	{ title: 'Entries', uri: 'entries' },
+	{ title: 'Assets', uri: 'assets' },
+	{ title: 'Categories', uri: 'categories' },
+	{ title: 'Blocks', uri: 'blocks' },
+	{ title: 'Users', uri: 'users' },
+	{ title: 'Navigation', uri: 'navigation' },
+	{ title: 'SEOmatic', uri: 'seomatic' },
+	{ title: 'Retour', uri: 'retour' },
+] %}
+
+{% block sidebar %}
+	{% if pages is defined and pages | length > 1 %}
+	<nav>
+		<ul>
+			{% for page in pages %}
+				<li>
+					<a class="{{ craft.app.request.getSegment(2) == page.uri ? 'sel' }}" href="{{ url('guide/' ~ page.uri) }}">
+						{{ page.title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</nav>
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div class="g-prose g-prose-sm lg:g-prose-base">
+		<h1>{{ title }}</h1>
+		{{ block('inner_content') }}
+	</div>
+{% endblock %}

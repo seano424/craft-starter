@@ -1,0 +1,25 @@
+{% set title = "Blocks" %}
+{% extends "guide/_layout" %}
+{% set blocks = craft.app.fields.getFieldByHandle('blocks').blockTypes %}
+
+{% block inner_content %}
+	<p>Your site is composable using a variety of "<strong>Blocks</strong>". That means you can create a page and choose one of many blocks to ensure each of your pages is unique and serves just the right content for your users.</p>
+
+	<p>Creating a set of blocks allows you and your content authors to create a feature-rich site, even with a handful of block options.</p>
+
+	<p>With your <strong>{{ blocks | length }}</strong> block types, and without repeating blocks, you could create <strong>{{ craft.guide.blockPermutations }}</strong> unique page layouts!</p>
+
+	<figure class="g-max-w-7xl">
+		<img src="{{ images }}/blocks.png">
+	</figure>
+
+	<h2>Preview your blocks</h2>
+	<p>With our block viewer you can easily get a full view of which blocks are used and where they are used across your entire site.</p>
+	<ul>
+		{% for block in blocks %}
+			<li>
+				<a href="{{ url('/dev/blocks', { selected: block.handle }) }}">{{ block.name }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

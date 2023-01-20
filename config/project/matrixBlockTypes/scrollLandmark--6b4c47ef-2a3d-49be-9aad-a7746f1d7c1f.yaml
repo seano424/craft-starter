@@ -1,0 +1,46 @@
+field: 366f2fce-cfd1-4bfd-bc19-95788b275078
+fieldLayouts:
+  725bd086-a588-434b-8b85-9e2b4d56f9bb:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 789db799-5bed-43f9-a5a6-f4e3e317b089
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 783f1925-5eb1-42e3-9434-85b9b79f82e2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9706181e-7659-42a3-9335-67ca1cb264d7
+        userCondition: null
+fields:
+  789db799-5bed-43f9-a5a6-f4e3e317b089:
+    columnSuffix: gmkswlkp
+    contentColumnType: text
+    fieldGroup: null
+    handle: identifier
+    instructions: "Use this block and place it above a block you would like to scroll to from another block!\r\n\r\nGive this field an identifier like **#about**. Then, in another block with a link field, choose the **custom** option, and enter the same identifier you use here with a hashtag in front of it, like so: **#about**"
+    name: Identifier
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: scrollLandmark
+name: 'Scroll Landmark'
+sortOrder: 4
